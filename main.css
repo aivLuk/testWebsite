@@ -10,7 +10,7 @@ body, body * {
     display: inline-block;
     width: 100%;
 }
-.left {
+.left_container {
     display: inline-block;
     width: 200px;
     
@@ -21,7 +21,7 @@ body, body * {
     height: 200px;
 }
 
-.right {
+.right_container {
     display: inline-block;
     width: calc(100% - 205px);
     height: 100vh;
@@ -29,9 +29,8 @@ body, body * {
     top: 0;
 }
 
-.rightpic {
-    width: 100%;
-   
+.rightPicDiv {
+    width: 100%;  
 }
 
 img {
