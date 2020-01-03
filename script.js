@@ -3,9 +3,8 @@ async function getResults() {
         .then(result => {
             return result.json();
         })
-        .catch(error => allert(error));
-    const data = await getPics(res)
-
+        .catch(error => alert(error));
+    getPics(res);
 }
 
 function getPics(arr) {
@@ -14,7 +13,7 @@ function getPics(arr) {
         let img = document.createElement("img");
         img.setAttribute("class", "styling")
         img.src = arr[i].download_url;
-        leftPic.appendChild(img)
+        leftPic.appendChild(img);
 
         img.addEventListener("click", function () {
             let rightContainer = document.querySelector("#rightPicDiv");
