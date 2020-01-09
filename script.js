@@ -1,10 +1,11 @@
 async function getResults() {
-    const res = await fetch("https://picsum.photos/v2/list")
-        .then(result => {
-            return result.json();
-        })
-        .catch(error => alert(error));
-    getPics(res);
+    try {
+        const data = await fetch("https://picsum.photos/v2/list");
+        const res = await data.json();
+        getPics(res);
+    } catch (error) {
+        alert(error);
+    }
 }
 
 function getPics(arr) {
@@ -26,4 +27,5 @@ function getPics(arr) {
 }
 
 getResults();
+
 
