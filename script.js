@@ -16,13 +16,10 @@ function getPics(arr) {
         leftPic.appendChild(img);
 
         img.addEventListener("click", function () {
-            let rightContainer = document.querySelector("#rightPicDiv");
             let rightImg = document.querySelector("#mainImg");
             rightImg.src = arr[i].download_url;
-            rightContainer.style.display = "block";
             let info = document.querySelector("h3");
             info.textContent = `Author: ${arr[i].author}, Width: ${arr[i].width}, Height: ${arr[i].height}`;
-
         })
     }
 
